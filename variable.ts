@@ -8,8 +8,10 @@ const position: { x: number; y: number } = {
 
 const json = '{"x":10, "y":"apple"}';
 // const output = JSON.parse(json);
+// output.test();
+
 const output: { x: number; y: string } = JSON.parse(json);
-console.log(output);
+// output.test();
 
 const word = ["red", "green", "black"];
 let _found = false;
@@ -25,9 +27,15 @@ let numberAboveZero: boolean | number = false;
 
 for (let i = 0; i < numbers.length; i++) {
   const current = numbers[i];
-  if (typeof current === 'number' && current > 0) {
+  if ( current && current > 0) {
     numberAboveZero = current;
   }
   console.log(`numberAboveZero: ${numberAboveZero}`);
 }
 
+// for (let i = 0; i < numbers.length; i++) {
+//   if ( numbers[i] && numbers[i] > 0) {
+//     numberAboveZero = numbers[i];
+//   }
+//   console.log(`numberAboveZero: ${numberAboveZero}`);
+// }
